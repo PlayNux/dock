@@ -4,12 +4,15 @@
  */
 
 public class Dock.Launcher : Gtk.Button {
-    public string app_id { get; construct; }
+    public GLib.DesktopAppInfo app_info { get; construct; }
+    public bool pinned { get; set; }
+
+    public GLib.List<AppWindow> windows { get; owned set; }
 
     private static Gtk.CssProvider css_provider;
 
-    public Launcher (string app_id) {
-        Object (app_id: app_id);
+    public Launcher (GLib.DesktopAppInfo app_info) {
+        Object (app_info: app_info);
     }
 
     class construct {
@@ -22,9 +25,8 @@ public class Dock.Launcher : Gtk.Button {
     }
 
     construct {
+        windows = new GLib.List<AppWindow> ();
         get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        var app_info = new GLib.DesktopAppInfo (app_id);
 
         var image = new Gtk.Image () {
             gicon = app_info.get_icon ()
@@ -48,5 +50,13 @@ public class Dock.Launcher : Gtk.Button {
             });
 
         });
+    }
+
+    public void add_window (AppWindow window) {
+        windows.prepend (window);
+    }
+
+    public void remove_window (AppWindow window) {
+        windows.remove (window);
     }
 }
