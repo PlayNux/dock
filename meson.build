@@ -1,5 +1,5 @@
 project(
-  'io.elementary.dock',
+  'io.playnux.dock',
   'vala', 'c',
   version: '1.0.0'
 )

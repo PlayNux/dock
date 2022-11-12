@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0
- * SPDX-FileCopyrightText: 2022 elementary, Inc. (https://elementary.io)
+ * SPDX-FileCopyrightText: 2022 Elementary, Inc. (https://elementary.io)
  */
 
 public class Dock.Launcher : Gtk.Button {
@@ -18,7 +18,7 @@ public class Dock.Launcher : Gtk.Button {
 
     static construct {
         css_provider = new Gtk.CssProvider ();
-        css_provider.load_from_resource ("/io/elementary/dock/Launcher.css");
+        css_provider.load_from_resource ("/io/playnux/dock/Launcher.css");
     }
 
     construct {

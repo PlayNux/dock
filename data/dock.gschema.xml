@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
-  <schema path="/io/elementary/dock/" id="io.elementary.dock">
+  <schema path="/io/playnux/dock/" id="io.playnux.dock">
     <key type="as" name="launchers">
-      <default>['gala-multitaskingview.desktop', 'org.gnome.Epiphany.desktop', 'io.elementary.mail.desktop', 'io.elementary.tasks.desktop', 'io.elementary.calendar.desktop', 'io.elementary.music.desktop', 'io.elementary.videos.desktop', 'io.elementary.photos.desktop', 'io.elementary.switchboard.desktop', 'io.elementary.appcenter.desktop']</default>
+      <default>['gala-multitaskingview.desktop', 'org.gnome.Epiphany.desktop', 'io.playnux.mail.desktop', 'io.playnux.tasks.desktop', 'io.playnux.calendar.desktop', 'io.playnux.music.desktop', 'io.playnux.videos.desktop', 'io.playnux.photos.desktop', 'io.playnux.switchboard.desktop', 'io.playnux.appcenter.desktop']</default>
       <summary>An ordered array of app id's to show as launchers</summary>
       <description>An ordered array of app id's to show as launchers</description>
     </key>

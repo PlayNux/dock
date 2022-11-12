@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0
- * SPDX-FileCopyrightText: 2022 elementary, Inc. (https://elementary.io)
+ * SPDX-FileCopyrightText: 2022 Elementary, Inc. (https://elementary.io)
  */
 
 public class Dock.MainWindow : Gtk.ApplicationWindow {
@@ -12,7 +12,7 @@ public class Dock.MainWindow : Gtk.ApplicationWindow {
 
     static construct {
         css_provider = new Gtk.CssProvider ();
-        css_provider.load_from_resource ("/io/elementary/dock/MainWindow.css");
+        css_provider.load_from_resource ("/io/playnux/dock/MainWindow.css");
     }
 
     construct {
@@ -29,7 +29,7 @@ public class Dock.MainWindow : Gtk.ApplicationWindow {
         resizable = false;
         set_titlebar (empty_title);
 
-        var settings = new Settings ("io.elementary.dock");
+        var settings = new Settings ("io.playnux.dock");
 
         foreach (string app_id in settings.get_strv ("launchers")) {
             box.append (new Launcher (app_id));

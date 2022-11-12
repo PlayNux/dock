@@ -15,7 +15,7 @@ Run `meson` to configure the build environment and then `ninja test` to build an
     cd build
     ninja test
 
-To install, use `ninja install`, then execute with `io.elementary.dock`
+To install, use `ninja install`, then execute with `io.playnux.dock`
 
     ninja install
-    io.elementary.dock
+    io.playnux.dock
